@@ -1,0 +1,26 @@
+<div ng-controller="purchaseController">
+  <header>
+    <form name="aForm" role="form">
+      <fieldset>
+        <div class="row">
+          <label for="user" class="control-label btnbar-lebel">User Name:</label>
+          <input type="text" class="form-control" name="user" placeholder="" ng-model="user" required>
+          <label for="email" class="control-label btnbar-lebel">E-mail:</label>
+          <input type="email" class="form-control" name="email" placeholder="" ng-model="email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+          <button type="button" class="btn btn-primary" ng-click="Purchase()" ng-disabled="aForm.$invalid"><img src="images/shopping-cart-32.png" height="16" alt="">  Check and Purchase</button>
+          <spam class="error">{{ errormessage }}</spam>
+        </div>  
+      </fieldset>
+    </form>
+  </header>
+  <div id="content">
+    <div class="article" ng-repeat="ar in data">
+      <img src="{{ar.img}}" alt="">
+      <div class="article-data">
+        <div>No: {{ar.a_id}}</div>
+        <div>{{ar.name}}</div>
+        <div>Category: {{ar.category}}</div>
+      </div>
+    </div>
+  </div>
+</div>

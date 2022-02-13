@@ -1,0 +1,32 @@
+<div ng-controller="homeController">
+  <header>
+    <div class="row">
+      <label for="limit" class="control-label btnbar-lebel">Limit:</label>
+      <select class="form-control limit" name="limit" ng-model="limit" ng-options="limits.id as limits.name for limits in limits"></select>
+      <label for="filter" class="control-label btnbar-lebel">Filter:</label>
+      <input type="text" class="form-control" name="filter" placeholder="" ng-model="filter" select-all>
+      <button type="button" class="btn btn-primary" ng-click="Filter()">Filter Data</button>
+      <button type="button" class="btn btn-primary" ng-click="Clear()">Clear Filter</button>
+      <span id="count">{{selected.length}}</span>
+      <button type="button" class="btn btn-primary" ng-click="Purchase()" ng-disabled="selected.length == 0"><img src="images/shopping-cart-32.png" height="16" alt="">  Purchase</button>
+    </div>  
+  </header>
+  <div id="content">
+    <div class="article" ng-repeat="ar in data">
+      <img src="{{ar.img}}" alt="">
+      <div class="article-data">
+        <div>No: {{ar.a_id}}</div>
+        <div>{{ar.name}}</div>
+        <div>Category: {{ar.category}}</div>
+        <input type="checkbox" class="cb" ng-model="ar.checked" ng-change="itemClick(ar.a_id,ar.checked)">
+      </div>
+    </div>
+  </div>
+  <footer>
+    <button type="button" class="btn btn-primary" ng-click="getPage(0)" ng-disabled="page == 0"><img src="images/first.png" height="16" alt=""></button>
+    <button type="button" class="btn btn-primary" ng-click="getPage(page-1)" ng-disabled="page == 0"><img src="images/prev.png" height="16" alt=""></button>
+    <button type="button" class="btn btn-primary" ng-click="getPage(btn.id)" ng-repeat="btn in pages" ng-disabled="btn.id == page">{{btn.id+1}}</button>
+    <button type="button" class="btn btn-primary" ng-click="getPage(page+1)" ng-disabled="page == pages.length-1"><img src="images/next.png" height="16" alt=""></button>
+    <button type="button" class="btn btn-primary" ng-click="getPage(pages.length-1)" ng-disabled="page == pages.length-1"><img src="images/last.png" height="16" alt=""></button>
+  </footer>
+</div>

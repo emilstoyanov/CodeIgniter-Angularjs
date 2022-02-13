@@ -1,0 +1,147 @@
+body {
+    font-family: Tahoma,Geneva,sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0px;    
+    width: 100%; 
+    margin-bottom: 5px;
+    padding: 5px 0px 5px 50px !important;
+    border-bottom: 2px solid #0fa1e0;
+    height: 42px;
+    color: #eeecec;
+    background: #141414; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#bfbfbf, #141414); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#bfbfbf, #141414); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#bfbfbf, #141414); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#bfbfbf, #141414); /* Standard syntax (must be last) */
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;    
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.btnbar-lebel{
+    padding-top: 10px;
+    margin: 0 5px;
+    float: left;
+}
+
+.form-control{
+	padding: 4px 4px;
+	height: 30px;
+    width: 200px;
+}
+
+.btn {
+    margin-left: 10px;
+    height: 30px;
+    padding: 0px 10px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    top: 60px;    
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 140px);
+    overflow-y: scroll;
+    overflow-x: hidden;   
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: auto;  
+    border-bottom: 1px dashed #a5e4ff;
+    border-right: 1px dashed #a5e4ff;
+    padding: 10px; 
+    color: #062633;
+}
+
+.article-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cb{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#cart {
+    position: fixed;
+    right: 20px;
+    width: 200px;
+    height: 32px;
+}
+
+#count {
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+input.ng-invalid,input.ng-invalid:focus {
+    border: 2px solid red;
+}
+
+.btn[disabled="disabled"],.btn[ng-disabled="true"]{
+  background-color: #007bff;;
+  cursor: not-allowed;
+}
+
+.error {
+    font-size: 24px;
+    color: red;
+    margin-right: 50px;
+}
+
+#loading_big {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: url('../images/ajax-loader-big.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    z-index: 10000;
+}
+
+#thankmess {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+}
+
+.thankyoumess {
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.limit {
+    width: 50px;
+}
