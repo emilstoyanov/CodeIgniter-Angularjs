@@ -6,7 +6,7 @@ class Purchase extends BaseController
 {
     public function index()
     {
-        return view('purchase');
+        return view('home');
     }
 
     public function Selected() {

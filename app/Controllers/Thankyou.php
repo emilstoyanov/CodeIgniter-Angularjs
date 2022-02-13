@@ -6,7 +6,7 @@ class Thankyou extends BaseController
 {
     public function index()
     {
-        return view('thankyou');
+        return view('home');
     }
 
 }
